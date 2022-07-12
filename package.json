@@ -1,6 +1,6 @@
 {
   "name": "lit-html-minifier-loader",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "webpack loader that minifies the html in template string literals",
   "main": "dist/index.js",
   "files": [
