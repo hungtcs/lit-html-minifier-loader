@@ -3,11 +3,16 @@ import { minify, Options as HtmlMinifierOptions } from 'html-minifier';
 
 export interface LoaderOptions {
   debug?: boolean;
+  disabled?: boolean;
   htmlMinifierOptions?: HtmlMinifierOptions;
 }
 
 export default function LitHtmlMinifierLoader(this: webpack.LoaderContext<LoaderOptions>, source: string) {
-  const { debug, htmlMinifierOptions = {} } = this.getOptions();
+  const { debug, disabled, htmlMinifierOptions = {} } = this.getOptions();
+
+  if (disabled) {
+    return source;
+  }
 
   const htmlWithTags = source.match(/html\s*`([^`]*)`/g);
   if (htmlWithTags === null) {
