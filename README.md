@@ -10,7 +10,7 @@ npm i -D lit-html-minifier-loader
 module: {
   rules: [
     {
-      test: /\.tsx?$/,
+      test: /\.element\.ts$/,
       use: [
         {
           loader: 'ts-loader',
@@ -19,11 +19,7 @@ module: {
         {
           loader: 'lit-html-minifier-loader',
           options: {
-            debug: false,
-            htmlMinifierOptions: {
-              caseSensitive: true,
-              collapseWhitespace: true,
-            }
+            debug: true,
           }
         }
       ],

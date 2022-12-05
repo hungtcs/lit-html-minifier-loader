@@ -20,12 +20,8 @@
     "url": "https://github.com/hungtcs/lit-html-minifier-loader/issues"
   },
   "homepage": "https://github.com/hungtcs/lit-html-minifier-loader#readme",
-  "peerDependencies": {
-    "html-minifier": "^4.0.0"
-  },
   "devDependencies": {
     "@types/html-minifier": "^4.0.2",
-    "html-minifier": "^4.0.0",
     "typescript": "^4.7.4",
     "webpack": "^5.73.0"
   }
